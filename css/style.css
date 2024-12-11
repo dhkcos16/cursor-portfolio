@@ -12,14 +12,14 @@
     width: 50%;
     margin-left: auto;
     word-break: break-word;
-    color: #b8b8b8;
+    font-size: 1.6rem;
+    color: #fff;
 }
 .profile p + p {
     margin-top: 20px;
 }
 .profile p em {
     font-weight: 700;
-    color: #f7f7f7;
 }
 .profile-visual {
     margin-top: 60px;
@@ -48,11 +48,13 @@
     margin-top: 40px;
 }
 .about-cont h3 {
+    font-size: 1.8rem;
     font-weight: 700;
 }
 .about-cont p {
+    font-size: 1.6rem;
     color: #b8b8b8;
 }
 .about-cont span {
-    font-size: 14px;
+    font-size: 1.4rem;
 }

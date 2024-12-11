@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 /* COMMON */
+html {
+    font-size: 62.5%;
+}
 body {
     width: 100%;
     height: 100%;
@@ -22,7 +25,7 @@ body {
     padding: 100px;
 }
 .inner h2 {
-    font-size: 24px;
+    font-size: 2.4rem;
 }
 a {
     text-decoration: none;
@@ -52,7 +55,7 @@ header .inner {
 }
 header a {
     color: #f7f7f7;
-    font-size: 16px;
+    font-size: 1.6rem;
     padding: 6px 16px;
     transition: 0.5s;
 }
@@ -81,6 +84,7 @@ header a {
 .intro {
     position: relative;
     overflow: hidden;
+    background-color: #000;
 }
 
 .intro .bg-video {
@@ -92,7 +96,7 @@ header a {
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 0;
     object-fit: cover;
 }
 
@@ -105,25 +109,29 @@ header a {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* 투명도 조절 가능 */
-    z-index: -1;
 }
 
-.intro .inner {
+.intro .inner-cont {
     position: relative;
     z-index: 2;
 }
 .intro-en {
-    font-size: 64px;
+    font-size: 6.4rem;
     line-height: 112%;
 }
 .intro-ko {
     margin-top: 50px;
     width: fit-content;
     margin-left: auto;
+    padding: 2em;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
 }
 .intro-ko p {
+    font-size: 1.6rem;
     word-break: break-word;
-    color: #b8b8b8;
+    color: #fff;
 }
 .intro-ko .intro-menu {
     margin-top: 20px;
@@ -132,6 +140,7 @@ header a {
     gap: 6px 20px;
 }
 .intro-ko .intro-menu a {
+    font-size: 1.8rem;
     color: #f7f7f7;
     display: flex;
     align-items: center;
@@ -201,6 +210,7 @@ header a {
     box-sizing: border-box;
 }
 .skill-wrap article h3 {
+    font-size: 1.8rem;
     color: #0a0a0a;
     font-weight: 700;
 }
@@ -242,6 +252,7 @@ header a {
 }
 .project .title p {
     margin-left: 5px;
+    font-size: 1.4rem;
 }
 .project ul {
     display: flex;
@@ -286,7 +297,7 @@ header a {
     padding: 0 10px;
     border-radius: 18px;
     background-color: rgb(0,255,0);
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #0a0a0a;
 }
@@ -296,10 +307,11 @@ header a {
 .project h3 {
     color: #f7f7f7;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.8rem;
     width: 90%;
 }
 .project p {
+    font-size: 1.4rem;
     color: #b8b8b8;
 }
 .project .more-icon {
@@ -318,7 +330,7 @@ header a {
     transition: 0.3s;
 }
 .project .more-icon span {
-    font-size: 20px;
+    font-size: 2rem;
 }
 .project li:hover {
     background-color: #2A2D2B;
@@ -341,7 +353,7 @@ header a {
 }
 .contact .email {
     margin-top: 50px;
-    font-size: 80px;
+    font-size: 8rem;
     color: #f7f7f7;
     transition: 0.3s;
 }
@@ -349,6 +361,7 @@ header a {
     color: rgb(0,255,0);
 }
 .contact .text {
+    font-size: 1.6rem;
     width: fit-content;
 }
 
@@ -360,6 +373,7 @@ footer {
     padding-bottom: 30px;
 }
 footer p.en-font {
+    font-size: 1.6rem;
     font-weight: 400;
     color: #b8b8b8;
 }

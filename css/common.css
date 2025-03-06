@@ -308,7 +308,7 @@ header a {
     color: #f7f7f7;
     font-weight: 700;
     font-size: 1.8rem;
-    width: 90%;
+    word-break: keep-all;
 }
 .project p {
     font-size: 1.4rem;

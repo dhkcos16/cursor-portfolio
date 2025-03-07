@@ -78,18 +78,18 @@
     margin-bottom: 0;
 }
 .modal .site-link {
-    margin: 2rem 0 ;
     display: flex;
+    margin: 2rem 0 ;
 }
 
 .modal .site-link li {
     margin: 0;
     padding: 0;
-    transition: none;
 }
 .modal .site-link li + li{
     margin-left: 1.5rem;
 }
+
 .modal .site-link a {
     display: inline-flex;
     align-items: center;
@@ -99,7 +99,7 @@
     background-color: var(--color-green);
     color: var(--color-white);
     font-size: 14px;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .modal .site-link a:hover {

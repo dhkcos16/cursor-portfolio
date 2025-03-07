@@ -263,7 +263,7 @@ header a {
     width: calc(25% - 45px);
     margin: 15px;
     box-sizing: border-box;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 .project .image {
     width: 100%;
@@ -271,6 +271,9 @@ header a {
     overflow: hidden;
     margin-bottom: 30px;
     border-radius: 10px;
+}
+.project .width-auto {
+    width: auto !important;
 }
 .project .image img {
     width: 100%;
@@ -347,9 +350,6 @@ header a {
     justify-content: center;
     gap: 1rem;
     margin-top: 4rem;
-}
-.proj-noti p{
-
 }
 .proj-noti .lottie-visual-animation {
     width: 16vw;

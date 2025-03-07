@@ -23,19 +23,18 @@
     
     /* 모달 스타일링 */
     background-color: #fff;
-    padding: 2rem; /* 20px */
-    border-radius: 0.8rem; /* 8px */
-    max-width: 90%; /* 모바일 대응 */
-    width: 80rem; /* 800px */
+    max-width: clamp(32rem, 90vw, 120rem);
+    padding: clamp(2rem, 3vw, 4rem);
+    border-radius: clamp(1rem, 2vw, 2rem);
     max-height: 90vh; /* 뷰포트 높이의 90% */
     overflow-y: auto; /* 내용이 많을 경우 스크롤 */
 }
 
 .modal-close {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    font-size: 3rem;
+    top: clamp(1.5rem, 2vw, 2rem);
+    right: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(2rem, 3vw, 3rem);
     cursor: pointer;
     background: none;
     border: none;
@@ -55,23 +54,23 @@
     margin-top: 2rem; /* 20px */
 }
 .modal-title h4 {
-    font-size: 4rem; /* 40px */
+    font-size: clamp(2rem, 3vw, 4rem);
     color: #222;
     font-weight: 700;
-    margin-bottom: 2rem; /* 20px */
+    margin-bottom: clamp(1.5rem, 2vw, 2rem);
 }
 
 /* 추가적인 타이틀 영역 스타일링 */
 .modal-info {
     display: flex;
     align-items: center;
-    gap: 2rem; /* 20px */
+    gap: clamp(1rem, 2vw, 2rem);
     margin-bottom: 1rem; /* 10px */
 }
 
 .modal-info .period {
     color: #666;
-    font-size: 1.6rem; /* 16px */
+    font-size: clamp(1.4rem, 1.6vw, 1.6rem);
 }
 
 .project .modal-info .badge-group {
@@ -79,7 +78,7 @@
 }
 .modal .site-link {
     display: flex;
-    margin: 2rem 0 ;
+    margin: clamp(1.5rem, 2vw, 2rem) 0;
 }
 
 .modal .site-link li {
@@ -87,18 +86,18 @@
     padding: 0;
 }
 .modal .site-link li + li{
-    margin-left: 1.5rem;
+    margin-left: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .modal .site-link a {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 2rem;
-    border-radius: 8px;
+    padding: clamp(1.5rem, 2vw, 2rem);
+    border-radius: clamp(0.6rem, 1vw, 0.8rem);
     background-color: var(--color-green);
     color: var(--color-white);
-    font-size: 14px;
+    font-size: clamp(1.3rem, 1.5vw, 1.4rem);
     transition: background-color 0.3s ease;
 }
 
@@ -111,14 +110,15 @@
 }
 
 .modal-desc p {
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 1.6vw, 1.6rem);
     line-height: 1.6;
     color: #222; /* 기존 색상이 있었다면 더 진한 색상으로 변경 */
     font-weight: 500; /* 텍스트를 조금 더 두껍게 설정 */
+    margin-bottom: clamp(1.5rem, 2vw, 2rem);
 }
 
 .modal-swiper {
-    margin-top: 3rem;
+    margin-top: clamp(2rem, 3vw, 3rem);
 }
 
 .modal-swiper .swiper {
@@ -153,8 +153,8 @@
 /* 스와이퍼 네비게이션 버튼 스타일링 */
 .modal-swiper .swiper-button-next,
 .modal-swiper .swiper-button-prev {
-    width: 4rem;
-    height: 4rem;
+    width: clamp(3rem, 5vw, 4rem);
+    height: clamp(3rem, 5vw, 4rem);
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
     color: #222;
@@ -181,7 +181,7 @@
 /* Font Awesome 아이콘 스타일링 */
 .modal-swiper .swiper-button-next i,
 .modal-swiper .swiper-button-prev i {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 2vw, 2rem);
 }
 
 /* 버튼 위치 조정 */
@@ -196,4 +196,79 @@
 /* 스와이퍼 페이지네이션 스타일링 */
 .modal-swiper .swiper-pagination-bullet {
     background: #222;
+}
+
+/* 모달 반응형 스타일 */
+@media screen and (max-width: 1024px) {
+    .modal-content {
+        width: 90vw;
+        padding: 4vw;
+    }
+    .modal-close {
+        top: 4vw;
+        right: 4vw;
+    }
+    .modal-title h4 {
+        font-size: 5vw;
+        margin-bottom: 3vw;
+    }
+    .modal-info {
+        gap: 3vw;
+    }
+    .modal .site-link {
+        margin: 3vw 0;
+    }
+    .modal .site-link a {
+        padding: 2vw 3vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        padding: 5vw;
+    }
+    .modal-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2vw;
+    }
+    .modal .site-link {
+        flex-direction: column;
+        width: 100%;
+    }
+    .modal .site-link li + li {
+        margin: 2vw 0 0 0;
+    }
+    .modal .site-link a {
+        width: 100%;
+        justify-content: center;
+    }
+    .modal-swiper .swiper-button-next,
+    .modal-swiper .swiper-button-prev {
+        width: 8vw;
+        height: 8vw;
+    }
+    .modal-swiper .swiper-button-next i,
+    .modal-swiper .swiper-button-prev i {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        padding: 6vw;
+    }
+    .modal-close {
+        top: 3vw;
+        right: 3vw;
+    }
+    .modal-title h4 {
+        font-size: 6vw;
+    }
+    .modal-desc p {
+        font-size: 3.5vw;
+    }
+    .modal .site-link a {
+        font-size: 3.5vw;
+    }
 }

@@ -91,7 +91,7 @@
 }
 
 .modal .site-link a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 8px;
     padding: 2rem;

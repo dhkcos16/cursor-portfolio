@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
 /* COMMON */
+:root{
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antiabliased;
+    -moz-osx-font-smoothing: grayscale;
+}
 html {
     font-size: 62.5%;
 }
@@ -246,6 +252,9 @@ header a {
 .project .title p {
     margin-left: 5px;
     font-size: clamp(1.4rem, 1.6vw, 1.6rem);
+}
+.project .title:not(:first-child){
+    margin-top: 5rem;
 }
 .project .inner > ul {
     display: flex;

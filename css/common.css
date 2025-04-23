@@ -396,6 +396,58 @@ footer p.en-font {
     color: #b8b8b8;
 }
 
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+}
+
+.fade-in.active {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Index 페이지 순차적 페이드인 */
+.intro-en.fade-in.active {
+    animation-delay: 0.2s;
+}
+
+.intro-ko.fade-in.active {
+    animation-delay: 0.5s;
+}
+
+.skill.fade-in.active {
+    animation-delay: 0.7s;
+}
+
+/* About 페이지 순차적 페이드인 */
+.profile h2.fade-in.active {
+    animation-delay: 0.2s;
+}
+
+.profile p.fade-in.active {
+    animation-delay: 0.5s;
+}
+
+.profile p.fade-in.active + p.fade-in.active {
+    animation-delay: 0.7s;
+}
+
+.profile .profile-visual.fade-in.active {
+    animation-delay: 0.9s;
+}
+
 /* 반응형 미디어쿼리 */
 @media screen and (max-width: 1920px) {
     .inner {

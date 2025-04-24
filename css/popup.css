@@ -225,8 +225,8 @@
 
 @media screen and (max-width: 768px) {
     .modal-content {
-        width: 86vw;
-        padding: 5vw;
+        width: 84vw;
+        padding: 6vw;
     }
     .modal-info {
         flex-direction: column;

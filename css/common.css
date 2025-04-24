@@ -269,10 +269,26 @@ header a {
     background-color: #1E2020;
     border-radius: clamp(1.2rem, 2vw, 2rem);
     padding: clamp(1.5rem, 2vw, 2rem);
-    width: calc(25% - 45px);
     margin: clamp(1rem, 1.5vw, 1.5rem);
     box-sizing: border-box;
     transition: background-color 0.3s ease;
+}
+.project li:hover {
+    background-color: #2A2D2B;
+    transform: translateY(-1%);
+}
+.project li:hover img {
+    scale: 1.1;
+    transition: 0.3s;
+}
+.project li:hover .more-icon {
+    transition: 0.3s;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+}
+.project .inner > ul > li {
+    width: calc(25% - 45px);
 }
 .project .image {
     width: 100%;
@@ -337,20 +353,6 @@ header a {
 }
 .project .more-icon span {
     font-size: 2rem;
-}
-.project li:hover {
-    background-color: #2A2D2B;
-    transform: translateY(-1%);
-}
-.project li:hover img {
-    scale: 1.1;
-    transition: 0.3s;
-}
-.project li:hover .more-icon {
-    transition: 0.3s;
-    width: 50px;
-    height: 50px;
-    opacity: 1;
 }
 .proj-noti{
     position: relative;
@@ -459,7 +461,7 @@ footer p.en-font {
 }
 
 @media screen and (max-width: 1440px) {
-    .project li {
+    .project .inner > ul > li {
         width: calc(33.333% - 30px);
     }
     .skill-wrap article {
@@ -471,7 +473,7 @@ footer p.en-font {
     html {
         font-size: 56.25%; /* 9px */
     }
-    .project li {
+    .project .inner > ul > li {
         width: calc(50% - 30px);
     }
     .intro-en {
@@ -500,7 +502,7 @@ footer p.en-font {
         width: 90%;
         margin: 5vw 0 0;
     }
-    .project li {
+    .project .inner > ul > li {
         width: 100%;
         margin: 2vw;
     }
